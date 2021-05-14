@@ -368,7 +368,7 @@ class TestEvaluator(Callback):
 
         # Calculate mean metrics for all test sets
         if len(self.generators) > 1 and len(metrics):
-            mean_metrics = np.mean(metrics, axis=0)
+            mean_metrics = np.nanmean(metrics, axis=0)
             metrics.append(mean_metrics)
             metrics_names.append(['test_' + m for m in self.model.metrics_names])
 
