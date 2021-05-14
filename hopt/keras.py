@@ -439,7 +439,7 @@ class MultiGraphSaver(ModelCheckpoint):
 
 
 def get_timestamp():
-    return datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    return datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S-%f")
 
 
 def get_timestamp_from_path(path):
